@@ -1,0 +1,45 @@
+/*
+Chrome Extension with Database Backend (chrolaw), project by Matej Grahovac
+www.matejgrahovac.de
+
+An extension for Chrome, that recognizes references to German laws or bills
+and displays the quotes in an injected sidebar.
+
+
+this is the chrome extension manifest which desicribes the extension
+https://developer.chrome.com/extensions/manifest
+*/
+
+{
+  "manifest_version": 2,
+  "name": "Chrolaw",
+  "description": "Diese Erweiterung zeigt Zitate von Normen.",
+  "version": "1.0",
+  "offline_enabled": false,
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+  {
+    /*"matches":    ["*://*.rechtsprechung-im-internet.de/*"],*/
+    "matches":    ["http://*/*", "https://*/*"],
+    "css":        ["css/contentScript.css"],
+    "js":         ["lib/jquery.min.js", "lib/mark.min.js", "contentScript.js"],
+    "run_at":     "document_idle",
+    "all_frames": false
+  }],
+
+  "page_action": {
+    "default_title": "show me what you got"
+  },
+
+  "permissions": [
+    "http://h2721079.stratoserver.net:29000/",
+    "http://127.0.0.1/",
+    "tabs"
+  ]
+
+}

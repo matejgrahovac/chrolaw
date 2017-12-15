@@ -1,0 +1,104 @@
+/*
+Chrome Extension with Database Backend (chrolaw), project by Matej Grahovac
+www.matejgrahovac.de
+
+An extension for Chrome, that recognizes references to German laws or bills
+and displays the quotes in an injected sidebar.
+
+this is the content Script css file which styles the sidebar and highlighted
+text. It is (only) included in the manifest file.
+*/
+
+.chrolawMarkGreen {
+  background-color: green;
+  cursor:pointer;
+  /*text-decoration:underline;
+  text-decoration-style: dashed;
+  text-decoration-color: gray;*/
+}
+
+.chrolawMarkRed {
+  background-color: red;
+  /*text-decoration:underline;
+  text-decoration-style: dashed;
+  text-decoration-color: red;
+  cursor:pointer;*/
+}
+
+.chrolawMark {
+  background-color: yellow;
+  /*text-decoration:underline;
+  text-decoration-style: dashed;
+  text-decoration-color: red;*/
+  /*cursor:pointer;*/
+}
+
+#chrolawSidebar {
+  height: 100%;
+  width: 0;
+  right: 0;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 60px;
+  transition: 0.5s;
+  color: #818181;
+}
+
+#chrolawSidebarCloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: #818181;
+  cursor:pointer;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+#chrolawSidebarCloseBtn:hover, #chrolawSidebarCloseBtn:focus{
+  color: #f1f1f1;
+}
+
+#chrolawSidebCont  {
+  padding-bottom: 100px;
+}
+
+.chrolawSidebTitles {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  transition: 0.5s;
+  cursor:pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 100%;
+}
+
+.chrolawSidebTitles:hover {
+  color: #f1f1f1;
+}
+
+.chrolawSidebTitles.active{
+  color: #bfac31;
+}
+
+.chrolawSidebInners{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #f1f1f1;
+  display: none;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-size: 100%;
+}
+
+body {
+  transition: margin-right .5s;
+  height: 100%;
+}
