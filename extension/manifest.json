@@ -37,7 +37,7 @@ https://developer.chrome.com/extensions/manifest
   },
 
   "permissions": [
-    "http://h2721079.stratoserver.net:29000/",
+    "http://hxxxxxxxxxxxxxxxx000/",
     "http://127.0.0.1/",
     "tabs"
   ]
