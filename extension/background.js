@@ -42,7 +42,7 @@ var background = {
   // JSON file, https://www.w3schools.com/js/js_json_http.asp
   sendJson: function(data) {
     var xhr = new XMLHttpRequest();
-    url = "http://h2721079.stratoserver.net:29000/receivejson"
+    url = "hlkahsjdflkjasdfljkxxxxx00/receivejson"
     // url of server with port and route (here: flask app route)
     // url = "http://127.0.0.1:5000/receivejson"
     xhr.open("POST", url, true);
