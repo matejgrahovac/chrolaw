@@ -9,3 +9,5 @@ https://youtu.be/3lKKakbzEvM
 ## Testing
 
 To test it yourself, download/fork the folder named "extension" from https://github.com/matejgrahovac/chrolaw, go to "manage extensions" in Chrome, enable developer mode and add the extension folder. Then, go to https://matejgrahovac.de/test or any other web page with references to German bills. Please keep in mind, that the extension's pattern matching isn't perfect, yet.
+
+![Screenshot](https://github.com/matejgrahovac/chrolaw/blob/master/screenshot.png?raw=true "Screenshot")
